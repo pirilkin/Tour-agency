@@ -24,8 +24,6 @@ $(document).ready(function () {
         breakpoint: 992,
         settings: {
           arrows: false,
-          // centerMode: true,
-          // centerPadding: '0px',
           slidesToShow: 5,
           slidesToScroll: 1,
         }
@@ -35,7 +33,6 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           centerMode: true,
-          // centerPadding: '0px',
           slidesToShow: 5,
         }
       },
@@ -43,9 +40,6 @@ $(document).ready(function () {
         breakpoint: 576,
         settings: {
             arrows: false,
-        //   arrows: false,
-        //   centerMode: true,
-          // centerPadding: '0px',
           slidesToShow: 4,
         }
       },
@@ -53,8 +47,6 @@ $(document).ready(function () {
         breakpoint: 320,
         settings: {
           arrows: false,
-          // centerMode: true,
-          // centerPadding: '0px',
           slidesToShow: 3,
         }
       },
@@ -62,11 +54,31 @@ $(document).ready(function () {
         breakpoint: 280,
         settings: {
           arrows: false,
-          // centerMode: true,
-          // centerPadding: '0px',
           slidesToShow: 2,
         }
       }
     ]
   });
+     //-----------Стрелка возврата на первую страницу-------------------
+     var scroll = $(this).scrollTop();
+     var header = $('.scroll').innerHeight();
+ 
+     if (scroll > header) {
+         $('#top').fadeIn();
+     }
+     $(window).scroll(function () {
+         var scroll = $(this).scrollTop();
+         var header = $('.scroll').innerHeight();
+         if (scroll > header) {
+             $('#top').fadeIn();
+         } else {
+             $('#top').fadeOut();
+         }
+     })
+     $('#top').click(function () {
+         $('html').animate({
+             scrollTop: 0
+         }, 1000)
+     })
+     //-------------------///
 });
