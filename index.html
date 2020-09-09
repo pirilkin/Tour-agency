@@ -158,7 +158,7 @@
 					<h2 class="second-left__title">Почему мы?</h2>
 					<div class="second-left__one">
 						<img src="./img/pic1.jpg" alt="">
-						<div class="second-left__one-container">
+						<div class="second-left__one-container ">
 							<a href="#" alt="" class="second-left__one-container__top">Работаем ежедневно</a>
 							<p class="second-left__one-container__bottom">даже в выходные</p>
 						</div>
@@ -204,21 +204,23 @@
 						<!-- </div> -->
 					</div>
 						<div class="col-xl-12 ">
+							<!-- форма -->
 							<div class="second-form">
 								<h5 class="second-form__title">Осенняя скидка на ремонт 20%</h5>
-								<form class="second-form__items" action="" method="POST">
+								<form class="second-form__items" action="./telegram/telegram.php" method="POST">
 									<div class="second-form__yourName">
-										<label for="yourName">Ваше имя</label>
-										<input type="text" name="yourName">
+										<label for="online_name1" >Ваше имя</label>
+										<input id="online_name1"  type="text" name="name"  required="required">
 									</div>
 									<div class="second-form__number">
-										<label for="number">Номер телефона</label>
-										<input type="text" name="number" placeholder="8(415) 645-64-64">
+										<label for="online_phone1">Номер телефона *</label>
+										<input id="online_phone1" class="online_phone" autofocus="autofocus"  type="tel" name="phone" placeholder="8 (___) ___-__-__" required="required">
 									</div>
 									<div class="second-form__submit">
 										<input value="Отправить" type="submit">
 									</div>
 								</form>
+								<!-- конец формы -->
 								<p class="discount">Получите скидку при заказе до 9 сентября</p>
 								<p>Нажимая на кнопку «Отправить», вы подтверждаете своё совершеннолетие и соглашаетесь
 									на обработку персональных данных в соответствии с
@@ -417,12 +419,12 @@
 								<h5 class="second-form__title">Осенняя скидка на ремонт 20%</h5>
 								<form class="second-form__items"	action="" method="POST">
 									<div class="second-form__yourName">
-										<label for="yourName">Ваше имя</label>
-										<input type="text" name="yourName">
+										<label for="online_name2" >Ваше имя</label>
+										<input id="online_name2"  type="text" name="name"  required="required">
 									</div>
 									<div class="second-form__number">
-										<label for="number">Номер телефона</label>
-										<input type="text" name="number" placeholder="8(415) 645-64-64">
+										<label for="online_phone2">Номер телефона *</label>
+										<input id="online_phone2" class="online_phone" autofocus="autofocus"  type="tel" name="phone" placeholder="8 (___) ___-__-__" required="required">
 									</div>
 									<div class="second-form__submit">
 										<input value="Отправить" type="submit">
@@ -485,35 +487,39 @@
 				</div>
 
 	</footer>
-	<section class="contactForm">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6">
-					
-					<div class="second-form">
-						<h5 class="second-form__title">Осенняя скидка на ремонт 20%</h5>
-						<form class="second-form__items"	action="" method="POST">
-							<div class="second-form__yourName">
-								<label for="yourName">Ваше имя</label>
-								<input type="text" name="yourName">
-							</div>
+	<section class="form ">
+		 <div class="onebg">
+			 
+		 </div>
+			<!-- <div class="row">
+				<div class="col-xl-6"> -->
+					<div class="second-form popupForm">
+						<h5 class="second-form__title">Заказать звонок</h5>
+						<p>Специалист контакт-центра перезвонит вам в течение 2 минут.</p>
+						<!-- форма -->
+						<form class="second-form__items form-element" id="form-contact"	action="./telegram/telegram.php" method="post">
 							<div class="second-form__number">
-								<label for="number">Номер телефона</label>
-								<input type="text" name="number" placeholder="8(415) 645-64-64">
+								<label for="online_phone">Номер телефона *</label>
+								<input id="online_phone" autofocus="autofocus" class="online_phone" type="tel" 
+								name="phone" placeholder="8 (___) ___-__-__" required="required">
+							</div>
+							<div class="second-form__yourName">
+								<label for="online_name" >Ваше имя</label>
+								<input id="online_name"  type="text" name="name"  required="required">
 							</div>
 							<div class="second-form__submit">
-								<input value="Отправить" type="submit">
+								<input value="Перезвоните мне" type="submit">
 							</div>
 						</form>
-						<p class="discount">Получите скидку при заказе до 9 сентября</p>
-						<p>Нажимая на кнопку «Отправить», вы подтверждаете своё совершеннолетие и соглашаетесь
-							на обработку персональных данных в соответствии с
+						<!--  -->
+						<p>Нажимая на кнопку «Перезвоните мне», вы подтверждаете своё совершеннолетие и соглашаетесь на обработку персональных данных в соответствии с
 							<a href="">условиями</a>
 						</p>
+						<a class="closeForm" href="">X</a>
 					</div>
-				</div>
-			</div>
-		</div>
+				<!-- </div>
+			</div>-->
+		
 	</section>
 
 	
@@ -523,6 +529,9 @@
 	<script src="libs/js/jquery.waypoints.min.js"></script>
 	<script src="libs/js/jquery.counterup.min.js"></script>
 	<script src="slick/slick.min.js"></script>
+	<!-- <script src="telegram/telegram.js"></script> -->
+	<script src="libs/js/jquery.maskedinput.min.js"></script>
+	
 	<script src="js/script.js"></script>
 </body>
 

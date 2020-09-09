@@ -21,7 +21,7 @@ a{
 .registration-title,
 .second-form__title,
 .second-left__title,
- .third-left__title,
+.third-left__title,
  h1{
      .md-block({
          font-size: 25px !important;
@@ -32,7 +32,7 @@ a{
          text-align: center;
      });
  }
- #top {
+#top {
     display: none;
     position: fixed;
     right: 25px;
@@ -54,7 +54,6 @@ a{
         img:hover {
             opacity: 1;
             filter: contrast(80%) brightness(70%);
-            // background: #000;
             border-radius: 5px;
         }
 }
@@ -129,6 +128,9 @@ a{
         animation: btn-phone-circle2 3s infinite ease-out;
     }
 }
+.active{
+    display: block !important;
+}
 
 
 @import './params/mix.less';
@@ -138,6 +140,7 @@ a{
 @import './second.less';
 @import './third.less';
 @import './footer.less';
+@import './form.less';
 
 
 //-----шрифты-----//

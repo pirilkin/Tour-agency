@@ -81,4 +81,25 @@ $(document).ready(function () {
          }, 1000)
      })
      //-------------------///
+     
+     // Попап форма
+     $('#call a, .first-order ').click(function(e){
+       e.preventDefault();
+       $('.form').toggleClass('active');
+     })
+     $('.closeForm').click(function(e){
+       e.preventDefault();
+       $('.form').removeClass('active');
+     })
+    ////------
+    
+    //---ввод номера в форму---///
+    $('.online_phone').mask('8 (999) 999-99-99', {
+      autoclear: false,
+    });
+    // $('#online_name').mask('aaaaaaaaaaaaaaaaaaaaaaaaaaa', {
+    //   autoclear: false,
+    // });
+
+
 });
